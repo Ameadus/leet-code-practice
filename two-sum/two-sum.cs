@@ -4,6 +4,7 @@ public class Solution
 {
     public int[] TwoSum(int[] nums, int target)
     {
+        // Compared each index with everything that comes after it
         for (int i = 0; i < nums.Length - 1; i++)
         {
             for (int j = i + 1; j < nums.Length; j++)
@@ -27,10 +28,11 @@ class Program
         int[] array = { 1, 2, 3, 4, 5 };
         int targetSum = 7;
 
+        // Create instance of solution class
         Solution solution = new Solution();
         var indexesWithSum = solution.TwoSum(array, targetSum);
 
-        // Print the result
+        // Print the result as a pure array [x,y]
         Console.WriteLine("[" + string.Join(",", indexesWithSum) + "]");
     }
 }
